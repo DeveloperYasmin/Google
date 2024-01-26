@@ -1,6 +1,6 @@
 import React from 'react'
-import HomeHeader from './components/HomeHeader'
-import HomeSearch from './components/HomeSearch'
+import HomeSearch from '@/components/HomeSearch'
+import HomeHeader from '@/components/HomeHeader'
 
 const page = () => {
   return (
