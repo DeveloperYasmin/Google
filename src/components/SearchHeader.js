@@ -8,7 +8,7 @@ import SearchHeaderOptions from './SearchHeaderOptions';
 
 const SearchHeader = () => {
   return (
-   <header className='sticky top-0 bg-white bg-opacity-10'>
+   <header className='sticky top-0'>
     <div className='flex w-full p-6 items-center justify-between'>
       <Link href={"/"}>
       <h1 className='text-5xl font-extrabold text-black animate-pulse '>Google</h1>

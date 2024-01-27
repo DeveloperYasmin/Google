@@ -1,8 +1,15 @@
 import React from 'react'
+import { IoIosSearch } from "react-icons/io";
+
 
 const SearchHeaderOptions = () => {
   return (
-    <div>SearchHeaderOptions</div>
+    <div>
+      <div className=' flex sp'>
+      <IoIosSearch className='text-md'/>
+      <p>All</p>
+      </div>
+      </div>
   )
 }
 
