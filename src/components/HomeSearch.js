@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
+import Footer from './Footer';
  
 
 const HomeSearch = () => {
@@ -39,9 +40,10 @@ const HomeSearch = () => {
     <button disabled={randomsearchloading} onClick={randomsearch} className='btn flex items-center justify-center disabled:opacity-80'>
       {randomsearchloading?(<img src="spin.svg" alt="spin" className='h-6 text-center'/>):"I'm Feeling Lucky"}
       </button>
-
-
-   </div></>
+     
+   </div>
+   <Footer/>
+   </>
   )
 }
 
