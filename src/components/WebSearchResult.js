@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Parser  from 'html-react-parser'
+import PaginationButtons from './PaginationButtons'
 
 const WebSearchResult = ({results}) => {
   return (
@@ -18,6 +19,7 @@ const WebSearchResult = ({results}) => {
                 <p className='text-gray-600 '>{Parser(result.htmlSnippet)}</p>
                 </div>
         ))}
+        <PaginationButtons/>
     </div>
   )
 }
