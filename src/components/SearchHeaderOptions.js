@@ -18,11 +18,11 @@ const selectTab=(tab)=>{
 
   return (
     <div className='flex space-x-2 select-none border-b w-full justify-center lg:justify-start lg:pl-60 text-sm'>
-      <div onClick={()=>selectTab("All")} className={` flex  items-center space-x-1 border-b-4 border-transparent active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname=="/search/web" && "text-blue-500  border-blue-500"}`}>
+      <div onClick={()=>selectTab("All")} className={` flex  items-center space-x-1  active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname=="/search/web" && "text-blue-500 border-b-2  border-blue-500"}`}>
       <IoIosSearch className='text-md'/>
       <p>All</p>
       </div>
-      <div onClick={()=>selectTab("Images")} className={` flex  items-center space-x-1 border-b-4 border-transparent active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname=="/search/image" && "text-blue-500  border-blue-500"}`}>
+      <div onClick={()=>selectTab("Images")} className={` flex  items-center space-x-1  active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname=="/search/image" && "text-blue-500 border-b-2 border-blue-500  "}`}>
       <IoCameraOutline className='text-md' />
 
         <p>Images</p>

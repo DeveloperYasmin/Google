@@ -9,7 +9,7 @@ import SearchHeaderOptions from './SearchHeaderOptions';
 const SearchHeader = () => {
   return (
     
-   <header className=' fixed overflow-hidden top-0  bg-white'>
+   <header className=' fixed  overflow-hidden top-0  bg-white'>
     <div className=' lg:flex  w-full p-6 items-center justify-between'>
       <div className='flex'>
       <Link href={"/"}>
@@ -25,7 +25,7 @@ const SearchHeader = () => {
         <RiSettings3Line className='header-icon' />
         <CgMenuGridO className='header-icon' />
         </div>
-        <button className='hidden sm:inline-block ml-2   lg:mt-0 bg-gradient-to-r from-blue-600 to-red-400 transition-shadow text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md'>Sign in
+        <button className='hidden sm:inline-block ml-6  lg:mt-0 bg-gradient-to-r from-blue-600 to-red-400 transition-shadow text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md'>Sign in
         </button>
     </div>
   <SearchHeaderOptions/>
