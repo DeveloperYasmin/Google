@@ -4,7 +4,7 @@ import Parser  from 'html-react-parser'
 
 const WebSearchResult = ({results}) => {
   return (
-    <div className=' w-full mt-40 lg:mt-28 overflow-y-hidden px-3 pb-24 sm:pl-[5%] md:pl-[14%] lg:pl-60'>
+    <div className='flex-1 mx-auto mt-52 lg:mt-40 px-3 sm:pl-[5%] md:pl-[14%] lg:pl-60'>
         <p className='text-gray-600 text-sm mb-5 mt-3'>
             About {results.searchInformation?.formattedTotalResults}results({results.searchInformation?.formattedSearchTime} seconds)
         </p>

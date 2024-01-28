@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function SearchLayout({ children }) {
   return (
-    <div className="bg-white font-serif w-screen h-screen bg-no-repeat bg-center  bg-fixed bg-cover">
+    <div className="bg-white font-serif w-screen h-screen overflow-y-scroll overflow-x-hidden bg-no-repeat bg-center  bg-fixed bg-cover">
 
       <SearchHeader/>
          {children}
