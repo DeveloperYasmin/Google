@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+
 import { useRouter } from 'next/navigation';
 import Footer from './Footer';
  
@@ -28,10 +30,12 @@ const HomeSearch = () => {
     }
   return ( <>
    <form onSubmit={handlesubmit} className='flex sm:max-w-xl lg:max-w-xl focus-within:shadow-lg shadow-lg w-full mt-5 mx-auto max-w-[90%] border rounded-full border-gray-900 px-5 py-3'>
-   <IoIosSearch className='text-3xl hidden sm:inline-flex cursor-pointer text-purple-700' onClick={handlesubmit}/>
+   <IoIosSearch className='text-3xl  cursor-pointer text-black' onClick={handlesubmit}/>
 
     <input className='flex-grow pl-6 focus:outline-none bg-transparent' type="text" onChange={(e)=>setinput(e.target.value)} value={input}/>
-    <FaMicrophone className='text-2xl text-purple-700' />
+    <FaMicrophone className='text-2xl  cursor-pointer text-black  mr-5' />
+    <RxCross2 className='text-2xl text-black cursor-pointer ' onClick={()=>setinput("")}/>
+
    </form>
    <div className='flex flex-col space-y-2 sm:space-y-0 sm:space-x-4 justify-center sm:flex-row mt-8'>
     <button onClick={handlesubmit} disabled={googlesearchloading} className='btn flex items-center justify-center disabled:opacity-80'>

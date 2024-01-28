@@ -8,19 +8,24 @@ import SearchHeaderOptions from './SearchHeaderOptions';
 
 const SearchHeader = () => {
   return (
-   <header className='sticky top-0'>
-    <div className='flex w-full p-6 items-center justify-between'>
+    
+   <header className='fixed top-0  bg-white'>
+    <div className=' lg:flex  w-full p-6 items-center justify-between'>
+      <div className='flex'>
       <Link href={"/"}>
-      <h1 className='text-5xl font-extrabold text-black animate-pulse '>Google</h1>
+      <h1 className=' lg:text-5xl text-4xl font-extrabold text-black animate-pulse '>Google</h1>
       </Link>
-      <div className='flex-1'>
+      
+      <button className='ml-20 sm:hidden inline-block lg:mt-0 bg-gradient-to-r from-blue-600 to-red-400 transition-shadow text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md'>Sign in
+        </button></div>
+      <div className=' flex-1'>
         <Searchbox/>
         </div>
-        <div className='hidden md:inline-flex space-x-2 '>
+        <div className='hidden md:inline-flex space-x-2 ml-40'>
         <RiSettings3Line className='header-icon' />
         <CgMenuGridO className='header-icon' />
         </div>
-        <button className='bg-gradient-to-r from-blue-600 to-red-400 transition-shadow text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md ml-2'>Sign in
+        <button className='hidden sm:inline-block ml-2 mr-10  lg:mt-0 bg-gradient-to-r from-blue-600 to-red-400 transition-shadow text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md'>Sign in
         </button>
     </div>
   <SearchHeaderOptions/>
