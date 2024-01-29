@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        - name: build
+         run: npm run test --if-present
+         env:
+        CI: false
       - name: Detect package manager
         id: detect-package-manager
         run: |
