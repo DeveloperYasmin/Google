@@ -1,6 +1,6 @@
 import WebSearchResult from '@/components/WebSearchResult'
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const WebSearchPage =async ({searchParams}) => {
   await new Promise((resolve)=>setTimeout(resolve,7000))
@@ -20,9 +20,9 @@ const WebSearchPage =async ({searchParams}) => {
     </div>)
    }
 
-  return <>
+  return <Suspense>
   {results && <WebSearchResult results={data}/>}
-  </>;
+  </Suspense>;
 }
 
 export default WebSearchPage
