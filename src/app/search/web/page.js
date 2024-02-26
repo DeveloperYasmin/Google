@@ -1,9 +1,14 @@
 import WebSearchResult from '@/components/WebSearchResult'
 import Link from 'next/link'
 import React, { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
+
 
 const WebSearchPage =async ({searchParams}) => {
+  const searchParams = useSearchParams()
+
   await new Promise((resolve)=>setTimeout(resolve,7000))
+
   const startIndex=searchParams.start || "1"
   const response=await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}}&start=${startIndex}`)
   if(!response.ok){
