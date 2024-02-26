@@ -13,8 +13,7 @@ const Footer = () => {
             <li className='link'>Advertising</li>
             <li className='link'>Business</li>
             <li className='link'>How Search Works</li>
-            </ul>
-        <ul className='flex items-center space-x-6'>
+            </ul> <ul className='flex items-center space-x-6'>
             <li className='link'>Privacy</li>
             <li className='link'>Terms</li>
             <li className='link'>Settings</li>
