@@ -1,3 +1,5 @@
+
+
 import ImageSearchResults from '@/components/ImageSearchResults'
 import Link from 'next/link'
 import React from 'react'
