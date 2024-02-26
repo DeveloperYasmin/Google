@@ -5,7 +5,6 @@ import { useSearchParams } from 'next/navigation'
 
 
 const WebSearchPage =async ({searchParams}) => {
-  const searchParams = useSearchParams()
 
   await new Promise((resolve)=>setTimeout(resolve,7000))
 
