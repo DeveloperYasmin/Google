@@ -5,7 +5,6 @@ import { Suspense } from 'react'
 
 import { BsChevronLeft,BsChevronRight } from "react-icons/bs";
 
-
 const PaginationButtons = () => {
     const pathname=usePathname()
     const searchParams=useSearchParams()
