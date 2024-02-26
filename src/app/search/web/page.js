@@ -1,11 +1,12 @@
 import WebSearchResult from '@/components/WebSearchResult'
 import Link from 'next/link'
 import React, { Suspense } from 'react'
-import { useSearchParams } from 'next/router'
+import { useRouter } from 'next/router'
 
 const WebSearchPage = () => {
-  const searchParams = useSearchParams();
-  const startIndex = searchParams.start || "1"
+  const router = useRouter();
+  const { searchParams } = router.query;
+  const startIndex = searchParams?.start || "1"
 
   const fetchData = async () => {
     await new Promise((resolve) => setTimeout(resolve, 7000))
