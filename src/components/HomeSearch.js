@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 
 import { useRouter } from 'next/navigation';
 import Footer from './Footer';
+import Image from 'next/image';
  
 
 const HomeSearch = () => {
@@ -38,10 +39,10 @@ const HomeSearch = () => {
    </form>
    <div className='flex flex-col space-y-2 sm:space-y-0 sm:space-x-4 justify-center sm:flex-row mt-8'>
     <button onClick={handlesubmit} disabled={googlesearchloading} className='btn flex items-center justify-center disabled:opacity-80'>
-    {googlesearchloading?(<img src="spin.svg" alt="spin" className='h-6 text-center'/>):"Google Search"}
+    {googlesearchloading?(<Image src="spin.svg" alt="spin" fill className='h-6 text-center'/>):"Google Search"}
     </button>
     <button disabled={randomsearchloading} onClick={randomsearch} className='btn flex items-center justify-center disabled:opacity-80'>
-      {randomsearchloading?(<img src="spin.svg" alt="spin" className='h-6 text-center'/>):"I'm Feeling Lucky"}
+      {randomsearchloading?(<Image src="spin.svg" alt="spin" fill className='h-6 text-center'/>):"I'm Feeling Lucky"}
       </button>
      
    </div>
