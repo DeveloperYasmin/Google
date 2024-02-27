@@ -1,38 +1,32 @@
-import ImageSearchResults from '@/components/ImageSearchResults'
-import {useSearchParams } from 'next/navigation'
 
-import Link from 'next/link'
-import React, { Suspense } from 'react'
 
-const ImageSearchPage = async () => {
+import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Suspense } from 'react'
 
-  const searchParams=useSearchParams()
-  const searchTerm=searchParams.get("searchTerm")
-  const startIndex=searchParams.get("start")||1
-  
-  await new Promise((resolve)=>setTimeout(resolve,7000))
-  const response=await fetch(`https://www.googleapis.com/customsearch/v1?key=`)
-  if(!response.ok){
-    throw new Error("Something went wrong")
-  }
-   const data= await response.json()
-   const results=data.items;
-   if(!results){
-    return( 
-      <Suspense>
-    <div className=' flex flex-col mt-60 justify-center items-center pt-10'><Link href={`${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchTerm}}&searchType=image&start=${startIndex}`}></Link>
-      <h1 className='text-3xl mb-4'>No results found:(</h1>
-      <p className='text-lg'>Try search something else or go back to {" "}
-      <Link href="/" className="text-blue-500">homepage</Link>
-      </p>
-    </div>
-    </Suspense>)}
+import { BsChevronLeft,BsChevronRight } from "react-icons/bs";
+
+const ImageSearchPage = () => {
+    const pathname=usePathname()
+    const searchParams=useSearchParams()
+    const searchTerm=searchParams.get("searchTerm")
+    const startIndex=+searchParams.get("start")||1
     
-    { <Suspense>
-      results && <ImageSearchResults results={data}/>
-      </Suspense>}
-  
-
+  return (
+    <Suspense>
+    <div className='text-blue-700 flex px-10 pb-4 justify-between sm:justify-start sm:space-x-44 sm:px-0'>
+       {startIndex>=10 && (<Link href={`${pathname}?searchTerm=${searchTerm}&start=${startIndex-10}`}>
+       <div className='flex flex-col cursor-pointer items-center hover:underline'><BsChevronLeft className='h-5' />
+       <p>Previous</p></div>
+       </Link>)}
+       {startIndex<=90 && (<Link href={`${pathname}?searchTerm=${searchTerm}&start=${startIndex+10}`}>
+       <div className='flex flex-col cursor-pointer items-center hover:underline'><BsChevronRight className='h-5' />
+       <p>Next</p></div>
+       </Link>)}
+    </div>
+    </Suspense>
+  )
 }
 
 export default ImageSearchPage
