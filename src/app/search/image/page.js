@@ -1,11 +1,9 @@
 import ImageSearchResults from '@/components/ImageSearchResults'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
 
 import React, { Suspense } from 'react'
 
-const ImageSearchPage =async () => {
-    const searchParams=useSearchParams()
+const ImageSearchPage =async ({searchParams}) => {
     const searchTerm=searchParams.get("searchTerm")
     const startIndex=searchParams.get("start")||1
   await new Promise((resolve)=>setTimeout(resolve,7000))
