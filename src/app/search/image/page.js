@@ -1,7 +1,7 @@
 import ImageSearchResults from '@/components/ImageSearchResults';
 import Link from 'next/link';
 import React, { Suspense } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const ImageSearchPage = () => {
   const router = useRouter();
